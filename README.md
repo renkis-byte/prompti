@@ -37,7 +37,7 @@ Once you've successfully installed the extension, follow these simple steps to m
 
 4. **Customize Your Prompt**: Before you proceed, take a moment to tailor the prompt to your exact needs. Fill in any required input parameters or options as needed.
 
-5. **Copy to Clipboard**: With your prompt perfectly configured, a single click allows you to copy it to your clipboard, ready to be used in your favorite Long-Form Language Model.
+5. **Copy to Clipboard**: With your prompt perfectly configured, a single click allows you to copy it to your clipboard, ready to be used in your favorite LLM.
 
 That's it! You're now equipped to seamlessly incorporate detailed and customized prompts into your writing or creative endeavors.
 

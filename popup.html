@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prompti</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <script src="jquery-3.7.0.js"></script>
+        <link href="select2.min.css" rel="stylesheet" />
+        <script src="select2.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+      </head>      
+<body>
+    <header>
+        <h1>Prompti</h1>
+        <div id="noteText">Please note that it is not mandatory to complete all of the prompt inputs.</div>
+    </header>
+
+  <select id="promptType">
+    <option value="">--Select a prompt type--</option>
+    <optgroup label="Writing and Communication">   
+        <option value="emailDrafting">Email Drafting Prompt</option>
+        <option value="resumeCVReview">Resume/CV Review Prompt</option>
+        <option value="blogPostIdea">Blog Post Idea Prompt</option>
+    <optgroup label="Coding">
+        <option value="code">Coding Question Prompt</option>
+        <option value="algorithmDesign">Algorithm Design Prompt</option>
+        <option value="codeRefactoring">Code Refactoring Challenge Prompt</option>
+        <option value="TDDExercise">Test-Driven Development (TDD) Exercise Prompt</option>
+        <option value="dataManipulation">Data Manipulation and Transformation Prompt</option>
+        <option value="oodDesign">Object-Oriented Design Problem Prompt</option>
+    <optgroup label="Business">
+        <option value="productDescription">Product Description Writing Prompt</option>
+        <option value="marketingStrategy">Marketing Strategy Suggestion Prompt</option>
+        <option value="startupAdvice">Start-up Business Advice Prompt</option>
+        <option value="salesPitchCreation">Sales Pitch Creation Prompt</option>
+        <option value="businessPlanDevelopment">Business Plan Development Prompt</option>
+        <option value="personalBranding">Personal Branding and Online Presence Prompt</option>
+        <option value="socialMediaContentStrategy">Social Media Content Strategy Prompt</option>
+    <optgroup label="Education/Homework">
+        <option value="homeworkHelper">Homework Helper Prompt</option>
+        <option value="conceptExplainer">Concept Explainer Prompt</option>
+        <option value="essayOutlineBuilder">Essay Outline Builder Prompt</option>
+        <option value="languageLearningPractice">Language Learning Practice Prompt</option>
+    <optgroup label="Popular Plug-ins">
+        <option value="taskAutomation">Zapier Task Automation Prompt</option>
+        <option value="dataIntegration">Zapier Data Integration Prompt</option>
+        <option value="notificationAutomation">Zapier Notification Automation Prompt</option>
+        <option value="crmIntegration">Zapier CRM Integration Prompt</option>
+        <option value="ecommerceAutomation">Zapier E-Commerce Automation Prompt</option>
+        <option value="voxScript">VoxScript Prompt</option>
+        <option value="webPilot">WebPilot Prompt</option>
+        <option value="zillow">Zillow Prompt</option>
+        <option value="speechki">Speechki Prompt</option>
+        <option value="getYourGuide">GetYourGuide Prompt</option>
+        <option value="optionsPro">Options Pro Prompt</option>
+        <option value="chatWithPDF">ChatWithPDF Prompt</option>
+        <option value="giftwrap">Giftwrap Prompt</option>
+        <option value="chess">Chess Prompt</option>
+        <option value="rentableApartments">Rentable Apartments Prompt</option>
+        <option value="tripCom">Trip.com Prompt</option>
+        <option value="redfin">Redfin Prompt</option>
+        <option value="linkReader">Link Reader Prompt</option>
+        <option value="turo">Turo Prompt</option>
+        <option value="tutory">Tutory Prompt</option>
+        <option value="noteable">Noteable Prompt</option>
+        <option value="ambition">Ambition Prompt</option>
+        <option value="tastyRecipes">Tasty Recipes Prompt</option>
+        <option value="playlistAI">PlaylistAI Prompt</option>
+        <option value="yabble">Yabble Prompt</option>
+        <option value="aiTickerChat">AITickerChat Prompt</option>
+        <option value="upskillr">Upskillr Prompt</option>
+        <option value="lexiShopper">Lexi Shopper Prompt</option>
+        <option value="owlJourney">OwlJourney Prompt</option>
+        <option value="likewise">Likewise Prompt</option>
+        <option value="polygon">Polygon Prompt</option>
+        <option value="askYourPDF">AskYourPDF Prompt</option>
+        <option value="bohita">Bohita Prompt</option>
+        <option value="manorlead">Manorlead Prompt</option>
+    <optgroup label="Market Research">
+        <option value="marketResearchQuestionnaire">Market Research Questionnaire Design Prompt</option>
+        <option value="brandPerceptionStudy">Brand Perception Study Prompt</option>
+        <option value="pricingAnalysis">Pricing Analysis and Optimization Prompt</option>
+        <option value="marketSegmentation">Market Segmentation Study Prompt</option>
+        <option value="customerSatisfaction">Customer Satisfaction and Loyalty Survey Prompt</option>
+        <option value="conceptTesting">Concept Testing and Product Development Prompt</option>
+    <optgroup label="Home and Lifestyle">
+        <option value="personalScheduleOrganizer">Personal Schedule Organizer Prompt</option>
+        <option value="financialBudgetingAssistance">Financial Budgeting Assistance Prompt</option>
+        <option value="healthyMealPlanner">Healthy Meal Weekly Planner Prompt</option>
+        <option value="homeCleaningSchedule">Home Cleaning Schedule Prompt</option>
+        <option value="hobbySuggestion">Hobby Suggestion Prompt</option>
+        <option value="recipeCreation">Recipe Creation Prompt</option>
+        <option value="interiorDesignConsultation">Interior Design Consultation Prompt</option>
+        <option value="weddingPlanning">Wedding Planning Assistance Prompt</option>
+        <option value="personalDevelopment">Personal Development and Goal Setting Prompt</option>
+        <option value="fashionStyling">Fashion Styling and Outfit Coordination Prompt</option>
+        <option value="fitnessWorkoutPlan">Fitness Workout Plan Prompt</option>
+        <option value="parentingAdvice">Parenting Advice and Support Prompt</option>
+        <option value="eventPlanning">Event Planning and Coordination Prompt</option>
+        <option value="meditationGuidance">Meditation and Mindfulness Guidance Prompt</option>
+        <option value="homeImprovement">DIY Home Improvement and Renovation Prompt</option>
+    <optgroup label="SaaS and Software">
+        <option value="saasIdeaGenerator">SaaS Idea Generator Prompt</option>
+        <option value="taskManagementSaaS">Task Management SaaS Prompt</option>
+        <option value="crmSaaS">Customer Relationship Management (CRM) SaaS Prompt</option>
+        <option value="projectManagementSaaS">Project Management SaaS Prompt</option>
+        <option value="onlineLearningLMS">Online Learning Management System (LMS) SaaS Prompt</option>
+        <option value="hrManagementSaaS">Human Resources (HR) Management SaaS Prompt</option>
+    <optgroup label="E-Commerce and Dropshipping">
+        <option value="dropshippingItemIdea">Dropshipping Item Idea Prompt</option>
+        <option value="nicheMarketResearch">Niche Market Research Ecom Prompt</option>
+        <option value="productSourcing">Product Sourcing and Supplier Selection Ecom Prompt</option>
+        <option value="websiteDesign">Website Design and User Experience Ecom Prompt</option>
+        <option value="inventoryManagement">Inventory Management and Order Fulfillment Ecom Prompt</option>
+        <option value="marketingStrategies">Marketing and Advertising Strategies Ecom Prompt</option>
+    <optgroup label="Relationship Psychology">
+        <option value="conflictResolution">Conflict Resolution Strategies Prompt</option>
+        <option value="trustRapport">Building Trust and Rapport Prompt</option>
+        <option value="communicationRelationships">Effective Communication in Relationships Prompt</option>
+        <option value="workLifeBalance">Balancing Work and Personal Life Prompt</option>
+        <option value="collaborationTeamwork">Collaboration and Teamwork in Business Prompt</option>
+    <optgroup label="Other Plug-ins">
+        <option value="scholarAI">ScholarAI Prompt</option>
+        <option value="savvyTraderAI">Savvy Trader AI Prompt</option>
+        <option value="showMe">Show Me Prompt</option>
+        <option value="videoInsights">Video Insights Prompt</option>
+        <option value="yayForms">Yay! Forms Prompt</option>
+        <option value="public">Public Prompt</option>
+        <option value="kalendarAI">KalendarAI Prompt</option>
+        <option value="shimmerNutritionCoach">Shimmer: Nutrition Coach Prompt</option>
+        <option value="oneWordDomains">One Word Domains Prompt</option>
+        <option value="abcMouse">ABCmouse Prompt</option>  
+        <option value="change">Change Prompt</option>
+        <option value="bizToc">BizToc Prompt</option>
+        <option value="kraftful">Kraftful Prompt</option>
+        <option value="weatherReportData">Weather Report Data Prompt</option>
+        <option value="edX">edX Prompt</option>
+        <option value="portfolioPilot">PortfolioPilot Prompt</option>
+        <option value="mixerBoxOnePlayer">MixerBox OnePlayer Prompt</option>
+        <option value="golden">Golden Prompt</option>
+        <option value="cloudflareRadar">Cloudflare Radar Prompt</option>
+        <option value="imageSearch">ImageSearch Prompt</option>
+    <optgroup label="Other">
+        <option value="travelItinerarySuggestion">Travel Itinerary Suggestion Prompt</option>
+        <option value="techTroubleshooting">Tech Troubleshooting Prompt</option>
+        <option value="movieRecommendation">Movie Recommendation Prompt</option>
+        <option value="storyGenerator">Story Generator Prompt</option>
+        <option value="latex">LaTeX Formatting Prompt</option>
+
+
+        
+
+
+  </select>
+ 
+  <form id="promptForm">
+    <!-- Form fields will be added dynamically -->
+  </form>
+  
+  <button id="copyButton">Copy to Clipboard</button>
+  <button id="clearButton">Clear Previous Prompts</button>
+  <div id="previousPromptsContainer">
+    <h2>Previous Prompts</h2>
+    <div id="previousPrompts"></div>
+  </div>
+
+
+  <script src="popup.js"></script>
+
+  
+
+</body>
+</html>
+
+
+
+
+
